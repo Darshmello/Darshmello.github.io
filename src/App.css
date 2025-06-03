@@ -1,0 +1,8 @@
+.app {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+}
+
+/* Import global styles */
+@import './styles/global.css'; 
