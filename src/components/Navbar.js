@@ -12,9 +12,6 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
                 <a href="#photography">Photography</a>
                 <a href="#contact">Contact</a>
             </div>
-            <button id="theme-toggle" className="theme-toggle" onClick={toggleTheme}>
-                {isDarkMode ? <FaMoon /> : <FaSun />}
-            </button>
         </nav>
     );
 };
