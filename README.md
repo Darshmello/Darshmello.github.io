@@ -1,18 +1,17 @@
 # Darshmello - ML & AI Engineer Portfolio
 
-A modern, Apple-inspired portfolio website for a Machine Learning & AI Engineer, built with React and TypeScript.
+A modern, Apple-inspired portfolio website for a Machine Learning & AI Engineer, built with React using java script, html, and css.
 
 ## Features
 
 - 🎨 Apple-inspired design language
 - 📱 Fully responsive layout
 - ⚡ Performance optimized
-- 🌙 Dark/Light mode support
+- 🌙 Dark mode
 - 🎭 Smooth animations and transitions
 - 📸 Photography gallery
 - 📝 Blog section
 - 🔍 SEO optimized
-- 🚀 Modern React with TypeScript
 
 ## Tech Stack
 
@@ -22,6 +21,8 @@ A modern, Apple-inspired portfolio website for a Machine Learning & AI Engineer,
 - Framer Motion
 - React Router
 - Material-UI
+- HTML
+- CSS
 
 ## Prerequisites
 
