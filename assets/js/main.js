@@ -496,6 +496,24 @@
   });
 
   /* ======================================================================
+     10b. RESUME VIEWER + EMAIL
+     The address is never written into the markup as a mailto: it is assembled
+     from two data attributes the moment a person reaches for the link.
+     ====================================================================== */
+  var resumeOpen = $("#resumeOpen");
+  if (resumeOpen) {
+    resumeOpen.addEventListener("click", function () {
+      openViewer([{ type: "image", src: "assets/img/resume/page-1-1500.webp", cap: "Résumé — Darsh Gangakhedkar" }], 0);
+    });
+  }
+  function armMail(a) { a.href = "mailto:" + a.getAttribute("data-u") + "@" + a.getAttribute("data-d"); }
+  $$("a[data-u]").forEach(function (a) {
+    ["pointerenter", "focus", "touchstart", "click"].forEach(function (ev) {
+      a.addEventListener(ev, function () { armMail(a); }, { passive: true });
+    });
+  });
+
+  /* ======================================================================
      11. MISC
      ====================================================================== */
   var year = new Date().getFullYear();
