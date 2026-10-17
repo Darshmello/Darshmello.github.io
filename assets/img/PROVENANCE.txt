@@ -1,0 +1,5 @@
+dune-840.webp, dune-1400.webp, dune-2053.webp
+Source: user-supplied film key art (Dune, 2021), downloaded by the site owner as wallpapersden.com_hd-dune-2021-movie_2053x3000.jpg.
+Resized and re-encoded to WebP with Pillow. Rights remain with the original rights holder; used as a backdrop at the site owner's direction.
+
+portrait-*.webp: site owner's own photograph.
