@@ -34,6 +34,10 @@ files whose names match `slug`:
 Images are pre-sized WebP: photos `<slug>-{480,900,1600}.webp`, portrait
 `portrait-{480,760,1100}.webp`. The display face is the self-hosted `assets/fonts/tenor-sans-latin.woff2`.
 
+The full-bleed backdrop `assets/img/dune-*.webp` is **third-party film key art**, not original
+artwork; `assets/img/PROVENANCE.txt` records its source and that rights stay with the rights holder.
+Don't strip that file, and don't reuse the backdrop as if it were the owner's own photograph.
+
 ## Honesty constraints are product requirements
 
 The badge labels are claims and must stay true: `Recorded demo`, `Recorded run`, `Architecture
@@ -73,11 +77,12 @@ Screenshot checks: Chrome headless CLI with `--window-size` (desktop 1440x900, m
 Add `--force-prefers-reduced-motion` for a truthful settled full-page capture. Playwright screenshots
 of tall *elements* crash — capture the window/viewport instead.
 
-## Deploy — the live site is NOT served from `main`
+## Deploy - the live site IS served from `main`
 
-`gh-pages` currently serves https://darshmello.github.io, so **pushing `main` changes nothing live.**
-Verify on `main` first, then switch the Pages source to `main` / `/` (GitHub web UI preferred, so no
-token is handled in a shell), wait for the build, hard-refresh, and only then delete `gh-pages`.
+GitHub Pages publishes `main` / `/`, so **a push to `main` is live within about a minute** with no
+extra step. `origin/gh-pages` is a stale leftover branch (last commit 2025-06-10, the old React
+build); nothing serves from it and it is safe to delete. Verify over a local HTTP server first, push,
+wait for the build, then hard-refresh.
 
 `gh` CLI is not installed. Git holds a stored credential for `Darshmello`, so plain `git push` works —
 never print it or write it to a file.
@@ -93,8 +98,8 @@ never print it or write it to a file.
 
 ## Keep out of commits
 
-`zz-shot-*.html` (screenshot scratch), `PRODUCT.md`, `.impeccable/`, `.cursor/`, `.gemini/`,
-`.agents/` — design-process and local-tooling artifacts, already covered by `.gitignore`.
+`zz-shot-*.html` (screenshot scratch), `PRODUCT.md`, `DESIGN.md`, `.impeccable/`, `.cursor/`,
+`.gemini/`, `.agents/` - design-process and local-tooling artifacts, already covered by `.gitignore`.
 
 The active redesign spec is `C:\Users\darsh\.opencode\plan\dune-portfolio-revamp.md` (workspace root,
 outside the repo). It holds the palette, type scale, verification checklist and cutover steps; read it
