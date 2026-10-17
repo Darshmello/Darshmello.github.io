@@ -151,7 +151,7 @@ ul{margin:0;padding:0;list-style:none;}
   background:transparent;border-bottom:1px solid transparent;
   transition:background .4s var(--ease),border-color .4s var(--ease);
 }
-.nav.lifted{background:rgba(13,5,3,.92);border-bottom-color:var(--line-d);}
+.nav.lifted{background:var(--ember-0);border-bottom-color:var(--line-d);}
 .nav-in{height:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad);display:flex;align-items:center;gap:4px;}
 .brand{
   display:flex;align-items:center;gap:11px;margin-right:auto;white-space:nowrap;text-decoration:none;
